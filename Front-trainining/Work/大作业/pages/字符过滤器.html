@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符过滤器</title>
+</head>
+<body>
+
+<script>
+    /**
+     *地址构成：协议头：//host地址[ip/域名]/上下文？参数名1=参数值1&参数名2=参数值2#锚地址
+     * */
+    function filterSqlStr(str) {
+        var sqlList = ["-","#","*"];
+        for (var sql in sqlList){
+            if (str.indexOf(sqlList[字符过滤器]) != -1){
+                alert('含敏感字符，请重新输入！');
+            }
+        }
+        return true;
+    }
+
+    function getUrlData() {
+        var data = {};
+        var url = location.href;  //获取当前页面得地址
+        var dataList = url.split("?"[1].split("#")[0].split("&"));
+        for (var tempData in dataList){
+            console.log("参数名")
+        }
+    }
+</script>
+</body>
+</html>

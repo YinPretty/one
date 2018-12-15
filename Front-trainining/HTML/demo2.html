@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="logo.ico" >
+    <title>四川农业大学校运会</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: inline-block;
+        }
+        .left,.right{display: inline-block}
+        .left{
+            background: cadetblue;
+            width: 350px;
+            height: 798px;
+        }
+        .left img{
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin-left: 50%;
+            margin-top: 30px;
+            left: -50px;
+        }
+        .left span:nth-of-type(1){
+            color: white;
+            font-size: 30px;
+            margin-left: 23%;
+        }
+        .left p:nth-of-type(1):before,.left p:nth-of-type(2):before{
+            content: url("logo.ico");
+
+        }
+        .left p:nth-of-type(1),.left p:nth-of-type(2){
+            line-height: 1px;
+            color: white;
+            font-size: 20px;
+            margin-left: 40px  ;
+            transition: all 0.5s ease;
+            display: block;
+        }
+        .left p:nth-of-type(1):hover,.left p:nth-of-type(2):hover{
+            margin-left: 60px;
+        }
+        .right{
+            position: relative;
+            top: -150px;
+            width: 70%;
+            height: 570px;
+        }
+        .right_banner span{
+            color: gray;
+            font-size: large;
+            margin: 0 5px;
+        }
+        .right_banner span:hover{
+            background-color: lightgray;
+        }
+        .right_banner select{
+            position: relative;
+            top: -25px;
+            margin-left: 700px;
+            color: gray;
+            font-size: large;
+            border: none;
+        }
+        .right_text{
+            color: dimgray;
+            height: 50px;
+            line-height: 50px;
+            font-size: 25px;
+            background: whitesmoke;
+        }
+        .float {
+            position: relative;
+            top: 10px;
+            color: white;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: cornflowerblue;
+            border-radius: 3px;
+        }
+        .right_score{
+            position: relative;
+            margin-top: 30px;
+            width: 864px;
+        }
+        .right_score table td{
+            font-size: 15px;
+            color: gray;
+            width: 100px;
+        }
+        .right_score p:nth-child(1){
+            display: inline-block;
+            background: blue;
+            color: white;
+            border-radius: 3px;
+        }
+        .right_score p:nth-child(2){
+            display: inline-block;
+            background: green;
+            color: white;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="left">
+    <img src="download(1).png"><br>
+    <span>四川农业大学</span><hr color="black">
+    <p>单项录入</p>
+    <p>集体录入</p>
+</div>
+
+<div class="right">
+    <div class="right_banner">
+        <span>后台管理</span>
+        <span>预赛</span>
+        <span>决赛</span>
+        <select onchange="window.location=this.value">
+            <option>用户</option>
+            <option value="demo1.html">退出登录</option>
+        </select>
+    </div>
+
+    <div class="right_text">
+        预赛成绩——单项
+    </div>
+    <div class="float">成绩录入</div>
+    <div class="right_score">
+    <table border="1" cellspacing="0" width="940px">
+        <tr>
+            <th align="left">序号</th>
+            <th align="left">姓名</th>
+            <th align="left">校区</th>
+            <th align="left">学院</th>
+            <th align="left">专业</th>
+            <th align="left">参赛项目</th>
+            <th align="left">成绩</th>
+            <th align="left">加分</th>
+            <th align="left">操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>田智</td>
+            <td>雅安校区</td>
+            <td>信息工程学院</td>
+            <td>物联网工程</td>
+            <td>男子100米</td>
+            <td>79</td>
+            <td>+9</td>
+            <td>
+                <p>&nbsp;更新&nbsp;</p>
+                <p>&nbsp;删除&nbsp;</p>
+            </td>
+        </tr>
+    </table></div>
+</div>
+</div>
+</body>
+</html>

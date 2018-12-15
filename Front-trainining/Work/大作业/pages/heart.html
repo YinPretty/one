@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pretty的首页</title>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,html{
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+<!--<i class="fa fa-heart" aria-hidden="true"></i>-->
+<!--<i class="fa fa-heartbeat" aria-hidden="true"></i>-->
+<!--<i class="fa fa-gratipay" aria-hidden="true"></i>-->
+<!--<i class="fa fa-heart-o" aria-hidden="true"></i>-->
+
+<script>
+    var colorList=["#ea8a8a","#fc6b3f","#f7ca44","#d5eeff","#fafccb","#1e1548","#e40475","#ec9e69"];
+    var typeList=["fa-heart","fa-heartbeat","fa-gratipay","fa-heart-o"];
+    window.onload = function () {
+        drawHeart(300);
+    }
+    function heart(x,y,size,color,type) {
+        this.x=x;
+        this.y=y;
+        this.size=size;
+        this.color=color;
+        this.type=type;
+        this.create=function () {
+            var tempEle = document.createElement("i");
+            tempEle.setAttribute("class","fa "+this.type);
+            tempEle.setAttribute("aria-hidden","true");
+            tempEle.style.position="absolute";
+            tempEle.style.left=this.x+"px";
+            tempEle.style.top=this.y+"px";
+            tempEle.style.color=this.color;
+            tempEle.style.fontSize=this.size+"px";
+            document.body.appendChild(tempEle);
+        }
+        this.create();
+    }
+    function drawHeart(n) {
+        var containerH = document.body.offsetHeight;
+        var containerW = document.body.offsetWidth;
+        for (var i = 0; i < n; i++){
+            new heart( Math.random() * containerW ,
+                       Math.random() * containerH ,
+                       20 + Math.random() * 20 ,
+                       colorList[Math.ceil(Math.random() * colorList.length)],
+                       typeList[Math.ceil(Math.random() * colorList.length)]
+              )
+    }
+        console.log(containerH);
+        console.log(containerW);
+    }
+</script>
+</body>
+</html>

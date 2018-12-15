@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Practice</title>
+    <style>
+        ul{
+            width: 100%;
+            padding: 0;
+        }
+
+        li{
+            list-style: none;
+            float: left;
+        }
+
+        .image{
+            width: 200px;
+            margin-left: 80px;
+        }
+
+        #showLarge{
+            width: 500px;
+            position: fixed;
+            z-index: 999;
+            top: 100px;
+            left: 0;
+            /*display: none;*/
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <img src="1.jpg" onmousemove="showLargeImg(this)" onmouseout="hideLargeImg()" class="image">
+        </li>
+        <li>
+            <img src="2.jpg" onmousemove="showLargeImg(this)" onmouseout="hideLargeImg()" class="image">
+
+        </li>
+        <li>
+            <img src="3.jpg" onmousemove="showLargeImg(this)" onmouseout="hideLargeImg()" class="image">
+
+        </li>
+
+    </ul>
+
+    <img src="" alt="" id="showLarge">
+
+    <script>
+        var showLarge=document.getElementById("showLarge");
+        function showLargeImg(e) {
+            showLarge.src=e.src;
+            showLarge.style.left = (event.screenX+150)+"px";
+            showLarge.style.top = event.screenY+"px";
+            showLarge.style.display="block";
+
+        }
+        function hideLargeImg() {
+            showLarge.style.display="none";
+        }
+    </script>
+</body>
+</html>

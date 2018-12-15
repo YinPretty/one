@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>导航栏</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .menu-header{
+            width: 100%;
+            height: 50px;
+            background: #6495ED;
+        }
+        .menu-container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        ul,li{
+            list-style: none;
+            height: 50px;
+        }
+        ul{
+            width: 100%;
+        }
+        li{
+            float: left;
+            width: 14.2%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        li:hover{
+            background: #fafccb;
+        }
+        .menu-option:hover{
+            background: #fafccb;
+        }
+        .menu-option{
+            position: relative;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            background: #6495ED;
+        }
+        .menu-first,.menu-second{
+            display: none;
+        }
+        li:hover .menu-first{
+            display: block;
+        }
+        .menu-option:hover .menu-second{
+            display: block;
+        }
+        .menu-second{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+        }
+        section{
+            animation: showAnimation ease 1s;
+        }
+        @keyframes showAnimation{
+            0%{
+                opacity: 0;
+                transform: scale(0.7,0.7);
+        }
+            50%{
+                opacity: 1;
+                transform: scale(1.05,1.05);
+            }
+            75%{
+                opacity: 1;
+                transform: scale(0.9,0.9);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1,1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="menu-header">
+    <div class="menu-container">
+        <ul>
+            <li>
+                <span>首页</span>
+            </li>
+            <li>
+                <span>学院概况</span>
+                <section class="menu-first">
+                    <div class="menu-option">选项1</div>
+                    <div class="menu-option">选项2</div>
+                    <div class="menu-option">选项3</div>
+                    <div class="menu-option">选项4</div>
+                    <div class="menu-option">
+                        <span>选项5</span>
+                        <section class="menu-second">
+                            <div class="menu-option">选项1</div>
+                            <div class="menu-option">选项2</div>
+                            <div class="menu-option">选项3</div>
+                            <div class="menu-option">选项4</div>
+                            <div class="menu-option">选项5</div>
+                            <div class="menu-option">选项6</div>
+                        </section>
+                    </div>
+                </section>
+            </li>
+            <li>
+            <span>选项卡2</span>
+            <section class="menu-first">
+                <div class="menu-option">选项1</div>
+                <div class="menu-option">选项2</div>
+                <div class="menu-option">选项3</div>
+                <div class="menu-option">选项4</div>
+                <div class="menu-option">选项5</div>
+            </section>
+            </li>
+
+            <li>
+                <span>选项卡3</span>
+                <section class="menu-first">
+                    <div class="menu-option">选项1</div>
+                    <div class="menu-option">选项2</div>
+                    <div class="menu-option">选项3</div>
+                    <div class="menu-option">选项4</div>
+                    <div class="menu-option">选项5</div>
+                </section>
+            </li>
+
+            <li>
+                <span>选项卡4</span>
+                <section class="menu-first">
+                    <div class="menu-option">选项1</div>
+                    <div class="menu-option">选项2</div>
+                    <div class="menu-option">选项3</div>
+                    <div class="menu-option">选项4</div>
+                    <div class="menu-option">选项5</div>
+                </section>
+            </li>
+
+            <li>
+                <span>选项卡5</span>
+                <section class="menu-first">
+                    <div class="menu-option">选项1</div>
+                    <div class="menu-option">选项2</div>
+                    <div class="menu-option">选项3</div>
+                    <div class="menu-option">选项4</div>
+                    <div class="menu-option">选项5</div>
+                </section>
+            </li>
+
+            <li>
+                <span>选项卡6</span>
+                <section class="menu-first">
+                    <div class="menu-option">选项1</div>
+                    <div class="menu-option">选项2</div>
+                    <div class="menu-option">选项3</div>
+                    <div class="menu-option">选项4</div>
+                    <div class="menu-option">选项5</div>
+                </section>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

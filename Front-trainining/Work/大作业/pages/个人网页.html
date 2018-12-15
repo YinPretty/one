@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,
+     user=scalable=no"/>
+    <title>个人网页@Pretty</title>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+
+        }
+        /*移动端样式*/
+        @media screen and (max-width: 799px){
+            .showLarge{
+                cursor: pointer;
+                position: relative;
+                left: 75%;
+                top: -50px;
+                width: 110px;
+                height: 160px;
+            }
+            #showLarge{
+                width: 250px;
+                height: 400px;
+                display: none;
+                position: fixed;
+                transition: linear 0.3s;
+            }
+        }
+
+        div{
+            width: 100%;
+            height: 300px;
+            line-height: 50px;
+            background: whitesmoke;
+            opacity: 0.7;
+        }
+        .text-header{
+            position: relative;
+            top: 30px;
+            text-indent: 3em;
+            margin: 0 auto;
+            font-size: 30px;
+            font-family: "楷体";
+        }
+        .text-content{
+            margin: -20px auto 0 auto;
+            font-size: 15px;
+            text-indent: 2em;
+            width: 70%;
+        }
+        section{
+            width: 100%;
+            height: 100%;
+        }
+        section:nth-child(1){
+            background: #fafccb url("../images/9.jpg") no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        section:nth-child(2){
+            background: #fafccb url("../images/4.jpg") no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        section:nth-child(3){
+            background: #fafccb url("../images/8.jpg") no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        section:nth-child(4){
+            background: #fafccb url("../images/16.jpg") no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        /* pc端样式*/
+        @media screen and (min-width: 800px){
+        .showLarge{
+            cursor: pointer;
+            position: relative;
+            left: 75%;
+            top: -100px;
+            width: 160px;
+            height: 250px;
+        }
+        #showLarge{
+            width: 250px;
+            height: 400px;
+            display: none;
+            position: fixed;
+            transition: linear 0.3s;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <p class="text-header">关于过去</p><br>
+            <p class="text-content">在过去的十多年里，最难忘的无过于初中和高中的六年时光，初中三年的懵懂、天真，
+                                       没有太大的压力，也没有太多繁琐的事情，每天都过得轻轻松松。再到后来高中三年的
+                                       忍耐、勤恳，每天如山的书堆以及作业，来自于老师、父母的期望，再没有以往的悠闲
+                                       每天的时间都安排得很满，但只能一个人熬过那三年。</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p class="text-header">关于现在</p><br>
+            <p class="text-content">辗转许久，最后还是来到了外地，来到了川农继续我的学业，初来的时候人生地不熟，
+                                    与其他人没有太多的交流，每天都只能待在寝室，打打游戏、学点自己感兴趣的东西，偶尔跟室友出去
+                                    到处转转，到现在还没有那种要干出一番大事的冲动，冷冷清清、不骄不躁。</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p class="text-header">关于未来</p><br>
+            <p class="text-content">未来说远也远，说近也近，不期望自己的未来有多轰轰烈烈，只希望能够拥有足够的骄傲，
+                                    虽然现在还不知道自己以后会从事如何的职业，但都会尽应尽的努力去履行自己的义务，
+                                    因为这些都是构建一个家的基础。</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p class="text-header">关于自己</p><br>
+            <p class="text-content">喜欢台球、喜欢电子音乐、喜欢到处走、喜欢一些新的东西、喜欢直爽、
+                                    喜欢纪伯伦。多多指教！</p>
+            <img class="showLarge" src="../images/18.jpg"
+                 onmousemove="showLargeImg(this)" onmouseout="hideLargeImg()">
+            <img src=""  id="showLarge">
+        </div>
+    </section>
+
+    <script>
+        var showLarge=document.getElementById("showLarge");
+        function showLargeImg(e) {
+            showLarge.src=e.src;
+            showLarge.style.left = (event.screenX)+"px";
+            showLarge.style.top = event.screenY+"px";
+            showLarge.style.display="block";
+
+        }
+        function hideLargeImg() {
+            showLarge.style.display="none";
+        }
+    </script>
+</body>
+</html>

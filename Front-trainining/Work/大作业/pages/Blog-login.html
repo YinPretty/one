@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Login</title>
+    <style type="text/css" media="screen">
+        body,html{
+            padding: 0;
+            margin: 0;
+        }
+        .items {
+            width: 1535px;
+            height:798px;
+            box-sizing: border-box;
+            background-size: cover;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            background-repeat: no-repeat;
+            -webkit-animation: slider 15s linear infinite alternate;
+            animation: slider 15s linear infinite alternate;
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+
+        }
+
+
+
+        @-webkit-keyframes slider {
+            0% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/if5OFP.jpg) ;
+            }
+            25% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifISyQ.jpg) ;
+
+            }
+            50% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifIkF0.jpg) ;
+
+            }
+            75% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifIZSU.jpg);
+
+            }
+            100% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifI8fK.jpg);
+
+            }
+        }
+        @keyframes slider {
+            0% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/if5OFP.jpg);
+
+            }
+            25% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifISyQ.jpg);
+
+            }
+            50% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifIkF0.jpg);
+
+            }
+            75% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifIZSU.jpg);
+
+            }
+            100% {
+                background-image: url(https://s1.ax1x.com/2018/11/01/ifI8fK.jpg);
+
+            }
+        }
+        .login{
+            position: absolute;
+            top: 20%;
+            left: 37%;
+            width: 400px;
+            height: 500px;
+            opacity: 0.6;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 7px 7px 7px black;
+        }
+        .scLogo{
+            margin-left: 100px;
+            width: 200px;
+            height: 80px;
+            margin-top: 30px;
+        }
+        .p1{
+            font-size: 30px;
+            margin-left: 40%;
+            margin-top: -5px;
+        }
+        .p2,.p3{
+            font-size: larger;
+            margin-left: 5%;
+        }
+        input{
+            width: 80%;
+            height: 7%;
+            margin-left: 10%;
+            border: black solid 1px;
+            box-shadow: black;
+        }
+        .login-btn{
+            background: deepskyblue;
+            margin-left: 25%;
+            margin-top: 10%;
+            width: 50%;
+            height: 40px;
+            font-size: larger;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+        .login-btn:hover{
+            transform: scale(1.01,1.01);
+            transition: ease 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+<div class="slider">
+    <div class="items"></div>
+    <div class="login">
+        <img class="scLogo" src="https://s1.ax1x.com/2018/11/01/if5fJK.png">
+        <p class="p1">Login</p>
+        <p class="p2">USER</p><input type="text" id="uesrname" placeholder="Please enter your name/count"
+                                     onkeyup="this.value=this.value.replace(/\D/g,'')">
+        <p class="p3">PASSWORD</p><input type="password" id="password" placeholder="Please enter your password"
+                                         onkeyup="if(/\D/.test(this.value)){alert('只能输入数字');this.value='';}">
+        <form>
+            <input  class="login-btn" type="submit" value="Login In" onclick="qq()">
+        </form>
+    </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+    function qq() {
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        if(username == 201703837 && password == 1234){
+
+        }
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="../../plugins/juery-mobile/jquery.mobile-1.4.5.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="../../plugins/jquery-1.8.3/jquery-1.8.3/jquery.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="../../plugins/juery-mobile/jquery.mobile-1.4.5.js"></script>
+    <title>share-one</title>
+</head>
+<body>
+        <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ">显示弹窗</a>
+
+        <div data-role="popup" id="myPopup" class="ui-content" data-dismissible="false" style="max-width:400px;">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">关闭</a>
+            <p>我是不可取消的按钮 (data-dismissible="false)。唯一关闭这个弹窗的方式是通过点击右上角的关闭按钮。你无法通过点击弹窗之外的区域关闭弹窗。</p>
+        </div>
+
+        <a href="#popupBasic" data-rel="popup" class="ui-btn ui-shadow ui-corner-all ui-btn-inline">hello</a>
+        <div data-role="popup" id="popupBasic">
+            <span>hello hello</span>
+        </div>
+
+</body>
+</html>

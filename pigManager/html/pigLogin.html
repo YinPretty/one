@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猪场管家</title>
+    <link rel="stylesheet" href="../css/pigLogin.css">
+    <link rel="icon" href="../img/loginlogo.ico" type="images/x-icon">
+    <link rel="stylesheet" href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="top-content">
+    <div class="image-content"><img src="../img/loginlogo.png"></div>
+</div>
+<div id="boLang-bg1"></div>
+<div id="boLang-bg2"></div>
+
+<div class="bottom-content">
+
+    <div class="form-content">
+        <form>
+            <i class="fa fa-building" aria-hidden="true" style="color: darkgrey"></i>
+            单位：<input type="text">
+
+        </form>
+        <form>
+            <i class="fa fa-user-o" aria-hidden="true" style="color: darkgrey"></i>
+            姓名：<input type="text">
+
+        </form>
+        <form>
+            <i class="fa fa-mobile fa-2x" id="mobile-img" aria-hidden="true" style="color: darkgrey;"></i>
+            手机：<input type="text">
+
+        </form>
+        <form>
+            <i class="fa fa-envelope-o" aria-hidden="true" style="color: darkgrey;"></i>
+            验证码：<input type="text">
+        </form>
+        <form>
+            发送短信
+        </form>
+
+        <form>
+            提交注册
+        </form>
+        &nbsp;&nbsp;&nbsp;<a href="#" style="text-decoration: none">返回登录</a>
+    </div>
+
+</div>
+
+<script>
+    function waveloop1() {
+        $("#boLang-bg1").css({"left":"-236px"}).animate({"left":"-1233px"},25000,'linear',waveloop1());
+    }
+    function waveloop2() {
+        $("#boLang-bg2").css({"left":"0px"}).animate({"left":"-1009px"},60000,'linear',waveloop2());
+    }
+    waveloop1();
+    waveloop2();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/core.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- TITLE -->
+    <title>考试系统</title>
+    <!-- STYLESHEETS -->
+    <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="fixed-left deshboard-first close-it">
+
+<div id="wrapper">
+    <!-- Top Bar Start -->
+    <div class="topbar">
+
+        <!-- Button mobile view to collapse sidebar menu -->
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="top-fix-navbar">
+                    <p class="navbar-text">欢迎登陆考试系统管理平台</p>
+                    <form class="navbar-form navbar-right">
+                        <button type="button" class="btn btn-default btn-rounded btn-md " id="logOff"><i class="fa fa-exclamation-circle"></i>退出</button>
+                    </form>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Start right Content here -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <!-- Page-Title -->
+            <div class="page-title-group">
+                <h4 class="page-title">试卷管理</h4>
+                <h5 class="text-muted page-title-alt">四川农业大学信息工程学院</h5>
+                <ol class="breadcrumb">
+                    <li class="active"><i class="fa fa-tv">试卷管理</i></li>
+                </ol>
+            </div>
+            <div class="cb-page-content">
+                <div class="container">
+                    <!--responsive tabel -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box">
+                                <div class="card-box-head  border-b m-t-0">
+                                    <div class="cb-res-table">
+                                        <a href="#" class="btn btn-info btn-md btn-lg"  data-toggle="modal" data-target="#addTest">新增试卷</a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br>
+                                </div>
+                                <div class="card-box-content form-compoenent">
+
+                                    <div class="table-responsive data-table">
+                                            <table class="table table-hover table-striped ">
+                                             <thead>
+                                            <tr>
+                                                <th>id</th>
+                                                <th>试卷名称</th>
+                                                <th>答题时间</th>
+                                                <th>操作</th>
+                                            </tr>
+                                             </thead>
+                                             <tbody id="table">
+
+
+                                             </tbody>
+                                            </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- container -->
+        </div>
+        <!-- content -->
+
+    </div>
+
+    <!-- end row -->
+    <!-- /Right-bar -->
+</div>
+
+</div>
+<script src="../assets/jquery/dist/jquery.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/layer/layer.js"></script>
+<script src="../assets/cookie/jquery.cookie.js"></script>
+<script src="../build/js/common.js"></script>
+<script>
+    window.onload=function () {
+        if ($.cookie('token')==""){
+            window.location="login.html";
+            console.log($.cookie('token'))
+        } else {
+            $.ajax({
+                url:API.getAPI(API.paper),
+                type:"post",
+                dataType:'json',
+                data:{
+                    token:$.cookie('token'),
+                },
+                beforeSend:function () {
+                    layer.load();
+                },
+                success:function (data) {
+                    if (data.status==0){
+                        var data=data.data;
+                        $.each(data,function (index,test) {
+                          $("#table").append('  <tr>\n' +
+                              '<td>'+test.id+'</td>\n' +
+                              '<td>'+test.title+'</td>\n' +
+                              '<td>'+test.testTime+'</td>\n' +
+                              '<td>ecfdcdc</td>\n' +
+                              '</tr>')
+                        })
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                },
+                error:function (data) {
+                    layer.alert(data.msg)
+                },
+                complete:function () {
+                    layer.close(layer.load());
+                }
+            })
+        }
+    }
+
+
+</script>
+</body>
+</html>
