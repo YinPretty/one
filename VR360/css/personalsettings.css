@@ -1,0 +1,63 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    background: #acb6e5;
+    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);
+    background: linear-gradient(to right, #86fde8, #acb6e5);
+    width: 30%;
+    height: auto;
+    border: #00a0df solid 1px;
+    margin-left: 37%;
+    margin-top: 10%;
+    font-size: large;
+    border-radius: 10px;
+
+}
+.frame-one{
+    width: 50%;
+    height: 20px;
+    margin-left: 7%;
+    margin-top: 15px;
+}
+.frame-two{
+    margin-top: 15px;
+}
+.text{
+    text-align: center;
+}
+.text i{
+    margin-left: 40px;
+}
+.frame-three{
+    margin-left: 60px;
+}
+.text-frame-three{
+    margin-top: 13px;
+}
+.changePassword{
+    text-align: center;
+    color: #00a0df;
+}
+.changePassword input{
+    margin: 10px 0 0 10px;
+}
+.password{
+    width: 50%;
+    height: 27px;
+}
+.btn{
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 35px;
+    border-radius: 7px;
+    border: #00a0df solid 1px;
+    margin: 20px 160px;
+    line-height: 35px;
+}
+.btn:hover{
+    box-shadow: 0 0 20px 3px #00a0df;
+}
